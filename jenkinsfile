@@ -21,7 +21,7 @@ pipeline {
                   echo 'test completed..'
                 }
                  phase("package") {
-                  sh "mvn ackage"
+                  sh "mvn package"
                   echo 'package completed..'
                 }     
                  phase("install") {

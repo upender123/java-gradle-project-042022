@@ -4,37 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                phase("clean") {
-                  sh "mvn clean"
-                  echo 'cleaning completed..'
-                }
-                phase("compile") {
-                  sh "mvn compile"
-                  echo 'compile completed..'
-                }
+                echo 'Building..'
             }
         }
         stage('Test') {
             steps {
-                phase("test") {
-                  sh "mvn test"
-                  echo 'test completed..'
-                }
-                 phase("package") {
-                  sh "mvn package"
-                  echo 'package completed..'
-                }     
-                 phase("install") {
-                  sh "mvn install"
-                  echo 'installation completed..'
-                }     
+                echo 'Testing..'
             }
         }
         stage('Deploy') {
             steps {
-                phase("deploy") {
-                 sh "mvn deploy"
-                 echo 'Deploying....'
+                echo 'Deploying....'
             }
         }
     }

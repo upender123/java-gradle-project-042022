@@ -1,7 +1,7 @@
 # Pull base image 
-From tomcat:8-jre8 
+From tomcat:latest 
 
 # Maintainer 
 MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+COPY ./maven-project.war /usr/local/tomcat/webapps
 
